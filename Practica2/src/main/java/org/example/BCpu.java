@@ -1,8 +1,10 @@
 package org.example;
 
+import static java.lang.Math.sqrt;
+
 public class BCpu implements ICpu {
-    private int[] registers = new int[4]; // 4 регистра
-    private int[] memory = new int[1024]; // Память (1024 элемента int)
+    private double[] registers = new double[4]; // 4 регистра
+    private double[] memory = new double[1024]; // Память (1024 элемента double)
 
     public static BCpu build() {
         return new BCpu();
@@ -46,6 +48,9 @@ public class BCpu implements ICpu {
                 break;
             case "div":
                 registers[3] = registers[0] / registers[1]; // d = a / b
+                break;
+            case "sqrt":
+                registers[3] = sqrt(registers[0]); // d = sqrt(a) квадратный корень из первого регистра
                 break;
             default:
                 throw new IllegalArgumentException("Unknown command: " + c.getCommand());

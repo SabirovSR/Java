@@ -4,6 +4,11 @@ public class Command {
     private String command;
     private String[] args;
 
+    @Override
+    public String toString() {
+        return command;
+    }
+
     //String... — это синтаксис, который используется для работы с переменным количеством аргументов в методах Java.
     // Это называется varargs (variable arguments).
     //Когда вы объявляете метод с аргументом вида String... args, это означает,

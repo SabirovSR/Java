@@ -7,9 +7,9 @@ public class Executer {
         this.cpu = cpu;
     }
 
-    public void run(Command[] program) {
-        for (Command cmd : program) {
-            cpu.exec(cmd);
+    public void run(Program program) throws Exception {
+        for (int i = 0; i < program.i; i++) {
+            cpu.exec(program.get(i));
         }
     }
 }
