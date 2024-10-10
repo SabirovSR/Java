@@ -8,6 +8,7 @@ public class Executer {
     }
 
     public void run(Program program) throws Exception {
+//        program.forEach(command -> cpu.exec(command));
         for (int i = 0; i < program.i; i++) {
             cpu.exec(program.get(i));
         }

@@ -6,7 +6,7 @@ public class Command {
 
     @Override
     public String toString() {
-        return command;
+        return command + " ";
     }
 
     //String... — это синтаксис, который используется для работы с переменным количеством аргументов в методах Java.

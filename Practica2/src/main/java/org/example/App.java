@@ -26,12 +26,8 @@ public class App {
             System.out.println("Error: " + e.getMessage());
         }
 
-        Iterable iterator = program.iterator();
-
-        System.out.print("Commands: ");
-        while (iterator.hasNext()) {
-            System.out.print(iterator.next() + " ");
-        }
+        System.out.print("Все команды: ");
+        program.forEach(System.out::print);
 
         System.out.println();
 
